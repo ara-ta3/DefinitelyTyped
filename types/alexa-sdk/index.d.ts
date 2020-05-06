@@ -26,6 +26,7 @@ export type DirectiveTypes = "AudioPlayer.Play" | "AudioPlayer.Stop" | "AudioPla
 export type TextContentType = "PlainText" | "RichText";
 export type MediaErrorType = "MEDIA_ERROR_UNKNOWN" | "MEDIA_ERROR_INVALID_REQUEST" | "MEDIA_ERROR_SERVICE_UNAVAILABLE" | "MEDIA_ERROR_INTERNAL_SERVER_ERROR" | "MEDIA_ERROR_INTERNAL_DEVICE_ERROR";
 export type SystemErrorType = "INVALID_RESPONSE" | "DEVICE_COMMUNICATION_ERROR" | "INTERNAL_ERROR";
+export type TextFieldType = "PlainText" | "Richtext"
 
 //#region Types
 export interface CardImage {
@@ -58,7 +59,7 @@ export interface Image {
 }
 export interface TextField {
     text: string;
-    type: string;
+    type: TextFieldType;
 }
 export interface TextContent {
     primaryText?: TextField;
